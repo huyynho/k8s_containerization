@@ -85,13 +85,13 @@ vi /etc/containerd/config.toml
 
 - Add GPG key for Kubernetes repository
 ```shell
-apt-get install ca-certificates curl gnupg lsb-release apt-transport-https gpg
-sudo mkdir -m 0755 -p /etc/apt/keyrings
-curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.29/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+sudo apt update
+sudo apt install -y apt-transport-https ca-certificates curl gpg
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.35/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
 ```
 - Add Kubernetes repository
 ```shell
-echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.29/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.35/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
 ```
 
 - Update repository
@@ -100,7 +100,7 @@ apt update -y
 ```
 - Install dependency components
 ```shell
-apt install -y kubelet=1.29.1-1.1 kubeadm=1.29.1-1.1 kubectl=1.29.1-1.1
+apt install -y kubelet kubeadm kubectl
 ```
 - Hold Kubernetes components version
 ```shell
