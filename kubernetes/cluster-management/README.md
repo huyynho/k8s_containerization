@@ -52,16 +52,16 @@ systemctl enable containerd
 - Cài đặt runc:
 
 ```shell
-wget https://github.com/opencontainers/runc/releases/download/v1.1.12/runc.amd64 -P /tmp/
+wget https://github.com/opencontainers/runc/releases/download/v1.4.2/runc.amd64 -P /tmp/
 install -m 755 /tmp/runc.amd64 /usr/local/sbin/runc
 ```
 
 - Cài đặt các plugin mạng CNI:
 
 ```shell
-wget https://github.com/containernetworking/plugins/releases/download/v1.4.0/cni-plugins-linux-amd64-v1.4.0.tgz -P /tmp/
+wget https://github.com/containernetworking/plugins/releases/download/v1.9.1/cni-plugins-linux-amd64-v1.9.1.tgz -P /tmp/
 mkdir -p /opt/cni/bin
-tar Cxzvf /opt/cni/bin /tmp/cni-plugins-linux-amd64-v1.4.0.tgz
+tar Cxzvf /opt/cni/bin /tmp/cni-plugins-linux-amd64-v1.9.1.tgz
 ```
 > Tạo thư mục `/opt/cni/bin` và giải nén các plugin vào đó. Các plugin này cung cấp các chức năng mạng cơ bản cho Kubernetes, như cấu hình địa chỉ IP, routing, và các quy tắc iptables.
 
