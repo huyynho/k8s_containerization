@@ -76,7 +76,7 @@ vi /etc/containerd/config.toml
 
 > `containerd config default | tee /etc/containerd/config.toml` tạo file cấu hình mặc định cho containerd.
 
-> Sử dụng `vi` để chỉnh sửa file `/etc/containerd/config.toml`, thay đổi giá trị `SystemdCgroup` thành `true` ở dòng 137 để containerd sử dụng cgroup của systemd, giúp quản lý tài nguyên hệ thống một cách hiệu quả hơn.
+> Sử dụng `vi` để chỉnh sửa file `/etc/containerd/config.toml`, thay đổi giá trị `SystemdCgroup` thành `true` ở dòng 109 để containerd sử dụng cgroup của systemd, giúp quản lý tài nguyên hệ thống một cách hiệu quả hơn.
 
 
 ## Install Dependency
