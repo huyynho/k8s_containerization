@@ -40,11 +40,13 @@ sysctl --system
 - Cài đặt containerd:
 
 ```shell
-wget https://github.com/containerd/containerd/releases/download/v1.7.13/containerd-1.7.13-linux-amd64.tar.gz -P /tmp/
-tar Cxzvf /usr/local /tmp/containerd-1.7.13-linux-amd64.tar.gz
-wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service -P /etc/systemd/system/
+wget https://github.com/containerd/containerd/releases/download/v2.2.2/containerd-2.2.2-linux-amd64.tar.gz -P /tmp/
+tar Cxzvf /usr/local /tmp/containerd-2.2.2-linux-amd64.tar.gz
+mkdir -p /usr/local/lib/systemd/system/
+wget https://raw.githubusercontent.com/containerd/containerd/main/containerd.service -P /usr/local/lib/systemd/system/
 systemctl daemon-reload
-systemctl enable --now containerd
+systemctl restart containerd
+systemctl enable containerd
 ```
 
 - Cài đặt runc:
