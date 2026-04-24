@@ -7,7 +7,6 @@
 > **Mô hình:** On-premise / Bare-metal / VM-based lab  
 > **Cụm mở rộng:** 3 Control Plane Node + 2 Worker Node  
 > **Phương pháp bootstrap:** kubeadm  
-> **Vị trí trong giáo trình:** Phần mở rộng sau Buổi 12
 
 ---
 
