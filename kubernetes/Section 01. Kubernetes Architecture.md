@@ -15,10 +15,6 @@
 | `worker-01` | Worker Node | Chạy workload của ứng dụng |
 | `worker-02` | Worker Node | Chạy workload của ứng dụng |
 
-> Ghi chú cho giảng viên:  
-> Trong bài giảng này, chỉ cần hiểu Kubernetes gồm những thành phần nào, mỗi thành phần làm gì, và khi tạo một Pod thì yêu cầu đó đi qua những bước nào.  
-> Chưa đi sâu vào Deployment, ReplicaSet, Service, Ingress, ConfigMap, Secret, Volume, Rolling Update, Rollback, Probe hoặc Scheduler nâng cao. Những phần đó sẽ được mở khóa ở các buổi sau.
-
 ---
 
 ## Mục tiêu buổi học
